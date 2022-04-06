@@ -1,0 +1,5 @@
+Debug/
+*.dep
+*.ewt
+*.log
+settings/
