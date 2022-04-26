@@ -2320,9 +2320,6 @@
                     <name>hardware_divider</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\divider.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
@@ -2338,9 +2335,6 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
@@ -2389,9 +2383,6 @@
                     <name>pico_bit_ops</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
@@ -2404,18 +2395,12 @@
                     <name>pico_divider</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_divider\divider.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
                     <name>pico_double</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\double_aeabi.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\double_init_rom.c</name>
@@ -2425,18 +2410,12 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
                     <name>pico_float</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\float_aeabi.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\float_init_rom.c</name>
@@ -2446,18 +2425,12 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
                     <name>pico_int64_ops</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
@@ -2470,9 +2443,6 @@
                     <name>pico_mem_ops</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                 </group>
                 <group>
@@ -2500,9 +2470,6 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_standard_link\crt0.S</name>
-                        <excluded>
-                            <configuration>Debug</configuration>
-                        </excluded>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp</name>
