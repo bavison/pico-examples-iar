@@ -950,15 +950,15 @@
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkProgramEntryLabelSelect</name>
                     <state>1</state>
                 </option>
                 <option>
+                    <name>IlinkProgramEntryLabelSelect</name>
+                    <state>0</state>
+                </option>
+                <option>
                     <name>IlinkProgramEntryLabel</name>
-                    <state>__iar_program_start</state>
+                    <state>_entry_point</state>
                 </option>
                 <option>
                     <name>DoFill</name>
