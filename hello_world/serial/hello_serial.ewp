@@ -2305,6 +2305,12 @@
             <group>
                 <name>rp2_common</name>
                 <group>
+                    <name>boot_stage2</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\bs2_default_padded_checksummed.S</name>
+                    </file>
+                </group>
+                <group>
                     <name>hardware_claim</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\claim.c</name>
