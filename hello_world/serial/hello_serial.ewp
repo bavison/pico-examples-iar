@@ -2318,6 +2318,18 @@
                 </group>
                 <group>
                     <name>hardware_divider</name>
+                    <group>
+                        <name>include</name>
+                        <group>
+                            <name>hardware</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include\hardware\divider_helper.S</name>
+                                <excluded>
+                                    <configuration>Debug</configuration>
+                                </excluded>
+                            </file>
+                        </group>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\divider.S</name>
                     </file>
@@ -2447,6 +2459,18 @@
                 </group>
                 <group>
                     <name>pico_platform</name>
+                    <group>
+                        <name>include</name>
+                        <group>
+                            <name>pico</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_platform\include\pico\asm_helper.S</name>
+                                <excluded>
+                                    <configuration>Debug</configuration>
+                                </excluded>
+                            </file>
+                        </group>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_platform\platform.c</name>
                     </file>
