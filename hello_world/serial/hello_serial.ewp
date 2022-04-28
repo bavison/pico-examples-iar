@@ -894,11 +894,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\RaspberryPi\RP2040.icf</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_standard_link\memmap_default.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
