@@ -910,7 +910,7 @@
                 </option>
                 <option>
                     <name>IlinkSuppressDiags</name>
-                    <state></state>
+                    <state>Lp005</state>
                 </option>
                 <option>
                     <name>IlinkTreatAsRem</name>
