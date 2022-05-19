@@ -842,7 +842,7 @@
                 </option>
                 <option>
                     <name>IlinkKeepSymbols</name>
-                    <state></state>
+                    <state>__checksum</state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryFile</name>
@@ -962,24 +962,24 @@
                 </option>
                 <option>
                     <name>DoFill</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>FillerByte</name>
-                    <state>0xFF</state>
+                    <state>0x00</state>
                 </option>
                 <option>
                     <name>FillerStart</name>
-                    <state>0x0</state>
+                    <state>0x10000000</state>
                 </option>
                 <option>
                     <name>FillerEnd</name>
-                    <state>0x0</state>
+                    <state>0x100000fb</state>
                 </option>
                 <option>
                     <name>CrcSize</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CrcAlign</name>
@@ -1001,11 +1001,11 @@
                 </option>
                 <option>
                     <name>CrcInitialValue</name>
-                    <state>0x0</state>
+                    <state>0xffffffff</state>
                 </option>
                 <option>
                     <name>DoCrc</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkBE8Slave</name>
@@ -1045,7 +1045,7 @@
                 </option>
                 <option>
                     <name>IlinkCrcUseAsInput</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IlinkOptInline</name>
@@ -1090,7 +1090,7 @@
                 <option>
                     <name>CrcAlgorithm</name>
                     <version>1</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CrcUnitSize</name>
@@ -2307,7 +2307,187 @@
                 <group>
                     <name>boot_stage2</name>
                     <file>
-                        <name>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\bs2_default_padded_checksummed.S</name>
+                        <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\compile_time_choice.S</name>
+                        <configuration>
+                            <name>Debug</name>
+                            <settings>
+                                <name>AARM</name>
+                                <data>
+                                    <version>11</version>
+                                    <wantNonLocal>0</wantNonLocal>
+                                    <debug>1</debug>
+                                    <option>
+                                        <name>AObjPrefix</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>AEndian</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>ACaseSensitivity</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>MacroChars</name>
+                                        <version>0</version>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AWarnEnable</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>AWarnWhat</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>AWarnOne</name>
+                                        <state>12</state>
+                                    </option>
+                                    <option>
+                                        <name>AWarnRange1</name>
+                                        <state></state>
+                                    </option>
+                                    <option>
+                                        <name>AWarnRange2</name>
+                                        <state></state>
+                                    </option>
+                                    <option>
+                                        <name>ADebug</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>AltRegisterNames</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>ADefines</name>
+                                        <state>PICO_BOARD=\"pico\"</state>
+                                        <state>PICO_BUILD=1</state>
+                                        <state>PICO_NO_HARDWARE=0</state>
+                                        <state>PICO_ON_DEVICE=1</state>
+                                        <state>NDEBUG</state>
+                                    </option>
+                                    <option>
+                                        <name>AList</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AListHeader</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>AListing</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>Includes</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>MacDefs</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>MacExps</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>MacExec</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>OnlyAssed</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>MultiLine</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>PageLengthCheck</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>PageLength</name>
+                                        <state>80</state>
+                                    </option>
+                                    <option>
+                                        <name>TabSpacing</name>
+                                        <state>8</state>
+                                    </option>
+                                    <option>
+                                        <name>AXRef</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AXRefDefines</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AXRefInternal</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AXRefDual</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AProcessor</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>AFpuProcessor</name>
+                                        <state>1</state>
+                                    </option>
+                                    <option>
+                                        <name>AOutputFile</name>
+                                        <state>$FILE_BNAME$.o</state>
+                                    </option>
+                                    <option>
+                                        <name>ALimitErrorsCheck</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>ALimitErrorsEdit</name>
+                                        <state>100</state>
+                                    </option>
+                                    <option>
+                                        <name>AIgnoreStdInclude</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AUserIncludes</name>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
+                                        <state>$PROJ_DIR$\..\..\generated\pico_base</state>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                                        <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\cmsis\include</state>
+                                    </option>
+                                    <option>
+                                        <name>AExtraOptionsCheckV2</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>AExtraOptionsV2</name>
+                                        <state></state>
+                                    </option>
+                                    <option>
+                                        <name>AsmNoLiteralPool</name>
+                                        <state>0</state>
+                                    </option>
+                                    <option>
+                                        <name>PreInclude</name>
+                                        <state></state>
+                                    </option>
+                                </data>
+                            </settings>
+                        </configuration>
                     </file>
                 </group>
                 <group>
