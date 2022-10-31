@@ -53,16 +53,16 @@
                 <option>
                     <name>GRuntimeLibSelect</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>GRuntimeLibSelectSlave</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>RTDescription</name>
-                    <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
+                    <state>Use the full configuration of the C/C++ runtime library. Full locale interface, C locale, file descriptor support, multibytes in printf and scanf, and hex floats in strtod.</state>
                 </option>
                 <option>
                     <name>OGProductVersion</name>
@@ -94,7 +94,7 @@
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
-                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</state>
+                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
@@ -214,6 +214,7 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
+                    <state>LIB_BOOT_STAGE2=1</state>
                     <state>LIB_PICO_BIT_OPS=1</state>
                     <state>LIB_PICO_BIT_OPS_PICO=1</state>
                     <state>LIB_PICO_DIVIDER=1</state>
@@ -253,7 +254,6 @@
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
                     <state>PICO_TARGET_NAME="blink"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
-                    <state>NDEBUG</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -293,7 +293,7 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state>Pa039</state>
+                    <state>Pa039,Pe170</state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
@@ -385,15 +385,15 @@
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
@@ -408,10 +408,10 @@
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\cmsis\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -583,6 +583,7 @@
                 </option>
                 <option>
                     <name>ADefines</name>
+                    <state>LIB_BOOT_STAGE2=1</state>
                     <state>LIB_PICO_BIT_OPS=1</state>
                     <state>LIB_PICO_BIT_OPS_PICO=1</state>
                     <state>LIB_PICO_DIVIDER=1</state>
@@ -622,7 +623,6 @@
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
                     <state>PICO_TARGET_NAME="blink"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
-                    <state>NDEBUG</state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -725,15 +725,15 @@
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
@@ -748,10 +748,10 @@
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\cmsis\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -805,10 +805,15 @@
             <name>CUSTOM</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <extensions></extensions>
-                <cmdline></cmdline>
-                <hasPrio>176</hasPrio>
-                <buildSequence>inputOutputBased</buildSequence>
+                <extensions>.pio</extensions>
+                <cmdline>$PROJ_DIR$\..\..\pico-sdk\tools\pioasm\pioasm -o c-sdk $FILE_PATH$ $PROJ_DIR$\$FILE_BNAME$.pio.h</cmdline>
+                <hasPrio>1</hasPrio>
+                <buildSequence>preCompile</buildSequence>
+                <outputs>
+                    <file>
+                        <name>$PROJ_DIR$\$FILE_BNAME$.pio.h</name>
+                    </file>
+                </outputs>
             </data>
         </settings>
         <settings>
@@ -948,7 +953,6 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state></state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -1242,11 +1246,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state></state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state></state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -1254,21 +1258,21 @@
                 </option>
                 <option>
                     <name>OGCoreOrChip</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GRuntimeLibSelect</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>GRuntimeLibSelectSlave</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>RTDescription</name>
-                    <state></state>
+                    <state>Use the full configuration of the C/C++ runtime library. Full locale interface, C locale, file descriptor support, multibytes in printf and scanf, and hex floats in strtod.</state>
                 </option>
                 <option>
                     <name>OGProductVersion</name>
@@ -1276,19 +1280,19 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state></state>
+                    <state>9.20.4.46976</state>
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state></state>
+                    <state>RP2040	RaspberryPi RP2040</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGBufferedTerminalOutput</name>
@@ -1300,12 +1304,12 @@
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
-                    <state></state>
+                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
                     <version>31</version>
-                    <state>38</state>
+                    <state>35</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -1322,11 +1326,11 @@
                 <option>
                     <name>CoreVariant</name>
                     <version>31</version>
-                    <state>38</state>
+                    <state>35</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>-</state>
+                    <state>RP2040	RaspberryPi RP2040</state>
                 </option>
                 <option>
                     <name>FPU2</name>
@@ -1345,7 +1349,7 @@
                 <option>
                     <name>GFPUCoreSlave2</name>
                     <version>31</version>
-                    <state>38</state>
+                    <state>35</state>
                 </option>
                 <option>
                     <name>OGCMSISPackSelectDevice</name>
@@ -1420,7 +1424,47 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
+                    <state>LIB_BOOT_STAGE2=1</state>
+                    <state>LIB_PICO_BIT_OPS=1</state>
+                    <state>LIB_PICO_BIT_OPS_PICO=1</state>
+                    <state>LIB_PICO_DIVIDER=1</state>
+                    <state>LIB_PICO_DIVIDER_HARDWARE=1</state>
+                    <state>LIB_PICO_DOUBLE=1</state>
+                    <state>LIB_PICO_DOUBLE_PICO=1</state>
+                    <state>LIB_PICO_FLOAT=1</state>
+                    <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_INT64_OPS=1</state>
+                    <state>LIB_PICO_INT64_OPS_PICO=1</state>
+                    <state>LIB_PICO_MALLOC=1</state>
+                    <state>LIB_PICO_MEM_OPS=1</state>
+                    <state>LIB_PICO_MEM_OPS_PICO=1</state>
+                    <state>LIB_PICO_PLATFORM=1</state>
+                    <state>LIB_PICO_PRINTF=1</state>
+                    <state>LIB_PICO_PRINTF_PICO=1</state>
+                    <state>LIB_PICO_RUNTIME=1</state>
+                    <state>LIB_PICO_STANDARD_LINK=1</state>
+                    <state>LIB_PICO_STDIO=1</state>
+                    <state>LIB_PICO_STDIO_UART=1</state>
+                    <state>LIB_PICO_STDLIB=1</state>
+                    <state>LIB_PICO_SYNC=1</state>
+                    <state>LIB_PICO_SYNC_CORE=1</state>
+                    <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
+                    <state>LIB_PICO_SYNC_MUTEX=1</state>
+                    <state>LIB_PICO_SYNC_SEM=1</state>
+                    <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UTIL=1</state>
                     <state>NDEBUG</state>
+                    <state>PICO_BOARD="pico"</state>
+                    <state>PICO_BUILD=1</state>
+                    <state>PICO_CMAKE_BUILD_TYPE="Release"</state>
+                    <state>PICO_COPY_TO_RAM=0</state>
+                    <state>PICO_CXX_ENABLE_EXCEPTIONS=0</state>
+                    <state>PICO_NO_FLASH=0</state>
+                    <state>PICO_NO_HARDWARE=0</state>
+                    <state>PICO_ON_DEVICE=1</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
+                    <state>PICO_TARGET_NAME="blink"</state>
+                    <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1460,7 +1504,7 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state></state>
+                    <state>Pa039,Pe170</state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
@@ -1481,11 +1525,11 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>11111110</state>
+                    <state>00000000</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IEndianMode</name>
@@ -1529,7 +1573,7 @@
                 </option>
                 <option>
                     <name>OutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.o</state>
                 </option>
                 <option>
                     <name>CCLibConfigHeader</name>
@@ -1541,7 +1585,44 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state></state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_base\include</state>
+                    <state>$PROJ_DIR$\..\generated\pico_base</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\boards\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1557,7 +1638,7 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>3</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
@@ -1582,7 +1663,7 @@
                 </option>
                 <option>
                     <name>IccLang</name>
-                    <state>0</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>IccCDialect</name>
@@ -1685,15 +1766,15 @@
                 </option>
                 <option>
                     <name>AWarnEnable</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>AWarnWhat</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>AWarnOne</name>
-                    <state></state>
+                    <state>12</state>
                 </option>
                 <option>
                     <name>AWarnRange1</name>
@@ -1705,7 +1786,7 @@
                 </option>
                 <option>
                     <name>ADebug</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>AltRegisterNames</name>
@@ -1713,7 +1794,47 @@
                 </option>
                 <option>
                     <name>ADefines</name>
-                    <state></state>
+                    <state>LIB_BOOT_STAGE2=1</state>
+                    <state>LIB_PICO_BIT_OPS=1</state>
+                    <state>LIB_PICO_BIT_OPS_PICO=1</state>
+                    <state>LIB_PICO_DIVIDER=1</state>
+                    <state>LIB_PICO_DIVIDER_HARDWARE=1</state>
+                    <state>LIB_PICO_DOUBLE=1</state>
+                    <state>LIB_PICO_DOUBLE_PICO=1</state>
+                    <state>LIB_PICO_FLOAT=1</state>
+                    <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_INT64_OPS=1</state>
+                    <state>LIB_PICO_INT64_OPS_PICO=1</state>
+                    <state>LIB_PICO_MALLOC=1</state>
+                    <state>LIB_PICO_MEM_OPS=1</state>
+                    <state>LIB_PICO_MEM_OPS_PICO=1</state>
+                    <state>LIB_PICO_PLATFORM=1</state>
+                    <state>LIB_PICO_PRINTF=1</state>
+                    <state>LIB_PICO_PRINTF_PICO=1</state>
+                    <state>LIB_PICO_RUNTIME=1</state>
+                    <state>LIB_PICO_STANDARD_LINK=1</state>
+                    <state>LIB_PICO_STDIO=1</state>
+                    <state>LIB_PICO_STDIO_UART=1</state>
+                    <state>LIB_PICO_STDLIB=1</state>
+                    <state>LIB_PICO_SYNC=1</state>
+                    <state>LIB_PICO_SYNC_CORE=1</state>
+                    <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
+                    <state>LIB_PICO_SYNC_MUTEX=1</state>
+                    <state>LIB_PICO_SYNC_SEM=1</state>
+                    <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UTIL=1</state>
+                    <state>NDEBUG</state>
+                    <state>PICO_BOARD="pico"</state>
+                    <state>PICO_BUILD=1</state>
+                    <state>PICO_CMAKE_BUILD_TYPE="Release"</state>
+                    <state>PICO_COPY_TO_RAM=0</state>
+                    <state>PICO_CXX_ENABLE_EXCEPTIONS=0</state>
+                    <state>PICO_NO_FLASH=0</state>
+                    <state>PICO_NO_HARDWARE=0</state>
+                    <state>PICO_ON_DEVICE=1</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
+                    <state>PICO_TARGET_NAME="blink"</state>
+                    <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -1789,7 +1910,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.o</state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>
@@ -1805,7 +1926,44 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state></state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_base\include</state>
+                    <state>$PROJ_DIR$\..\generated\pico_base</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\boards\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -1843,7 +2001,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>blink.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -1859,10 +2017,15 @@
             <name>CUSTOM</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <extensions></extensions>
-                <cmdline></cmdline>
-                <hasPrio>0</hasPrio>
-                <buildSequence>inputOutputBased</buildSequence>
+                <extensions>.pio</extensions>
+                <cmdline>$PROJ_DIR$\..\..\pico-sdk\tools\pioasm\pioasm -o c-sdk $FILE_PATH$ $PROJ_DIR$\$FILE_BNAME$.pio.h</cmdline>
+                <hasPrio>1</hasPrio>
+                <buildSequence>preCompile</buildSequence>
+                <outputs>
+                    <file>
+                        <name>$PROJ_DIR$\$FILE_BNAME$.pio.h</name>
+                    </file>
+                </outputs>
             </data>
         </settings>
         <settings>
@@ -1890,7 +2053,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>###Unitialized###</state>
+                    <state>blink.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1898,7 +2061,7 @@
                 </option>
                 <option>
                     <name>IlinkKeepSymbols</name>
-                    <state></state>
+                    <state>__checksum</state>
                 </option>
                 <option>
                     <name>IlinkRawBinaryFile</name>
@@ -1950,11 +2113,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>lnk0t.icf</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_standard_link\memmap_default.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2002,11 +2165,10 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state></state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkProgramEntryLabelSelect</name>
@@ -2014,11 +2176,11 @@
                 </option>
                 <option>
                     <name>IlinkProgramEntryLabel</name>
-                    <state></state>
+                    <state>_entry_point</state>
                 </option>
                 <option>
                     <name>DoFill</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>FillerByte</name>
@@ -2026,16 +2188,16 @@
                 </option>
                 <option>
                     <name>FillerStart</name>
-                    <state>0x0</state>
+                    <state>0x10000000</state>
                 </option>
                 <option>
                     <name>FillerEnd</name>
-                    <state>0x0</state>
+                    <state>0x100000fb</state>
                 </option>
                 <option>
                     <name>CrcSize</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CrcAlign</name>
@@ -2057,11 +2219,11 @@
                 </option>
                 <option>
                     <name>CrcInitialValue</name>
-                    <state>0x0</state>
+                    <state>0xffffffff</state>
                 </option>
                 <option>
                     <name>DoCrc</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkBE8Slave</name>
@@ -2101,11 +2263,11 @@
                 </option>
                 <option>
                     <name>IlinkCrcUseAsInput</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IlinkOptInline</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IlinkOptExceptionsAllow</name>
@@ -2146,7 +2308,7 @@
                 <option>
                     <name>CrcAlgorithm</name>
                     <version>1</version>
-                    <state>1</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CrcUnitSize</name>
@@ -2187,7 +2349,2431 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
+                    <state>blink_import_lib.o</state>
+                </option>
+                <option>
+                    <name>OILinkExtraOption</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryFile2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySymbol2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySegment2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryAlign2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkLogCrtRoutineSelection</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogFragmentInfo</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogInlining</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogMerging</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkDemangle</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkWrapperFileEnable</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkWrapperFile</name>
+                    <state></state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>IARCHIVE</name>
+            <archiveVersion>0</archiveVersion>
+            <data>
+                <version>0</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>IarchiveInputs</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IarchiveOverride</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IarchiveOutput</name>
                     <state>###Unitialized###</state>
+                </option>
+            </data>
+        </settings>
+    </configuration>
+    <configuration>
+        <name>MinSizeRel</name>
+        <toolchain>
+            <name>ARM</name>
+        </toolchain>
+        <debug>0</debug>
+        <settings>
+            <name>General</name>
+            <archiveVersion>3</archiveVersion>
+            <data>
+                <version>34</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>ExePath</name>
+                    <state>MinSizeRel\Exe</state>
+                </option>
+                <option>
+                    <name>ObjPath</name>
+                    <state>MinSizeRel\Obj</state>
+                </option>
+                <option>
+                    <name>ListPath</name>
+                    <state>MinSizeRel\List</state>
+                </option>
+                <option>
+                    <name>BrowseInfoPath</name>
+                    <state>MinSizeRel\BrowseInfo</state>
+                </option>
+                <option>
+                    <name>GEndianMode</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>Input description</name>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
+                </option>
+                <option>
+                    <name>Output description</name>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
+                </option>
+                <option>
+                    <name>GOutputBinary</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGCoreOrChip</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>GRuntimeLibSelect</name>
+                    <version>0</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>GRuntimeLibSelectSlave</name>
+                    <version>0</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>RTDescription</name>
+                    <state>Use the full configuration of the C/C++ runtime library. Full locale interface, C locale, file descriptor support, multibytes in printf and scanf, and hex floats in strtod.</state>
+                </option>
+                <option>
+                    <name>OGProductVersion</name>
+                    <state>9.20.4.46976</state>
+                </option>
+                <option>
+                    <name>OGLastSavedByProductVersion</name>
+                    <state>9.20.4.46976</state>
+                </option>
+                <option>
+                    <name>OGChipSelectEditMenu</name>
+                    <state>RP2040	RaspberryPi RP2040</state>
+                </option>
+                <option>
+                    <name>GenLowLevelInterface</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>GEndianModeBE</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>OGBufferedTerminalOutput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GenStdoutInterface</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>RTConfigPath2</name>
+                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</state>
+                </option>
+                <option>
+                    <name>GBECoreSlave</name>
+                    <version>31</version>
+                    <state>35</state>
+                </option>
+                <option>
+                    <name>OGUseCmsis</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGUseCmsisDspLib</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GRuntimeLibThreads</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CoreVariant</name>
+                    <version>31</version>
+                    <state>35</state>
+                </option>
+                <option>
+                    <name>GFPUDeviceSlave</name>
+                    <state>RP2040	RaspberryPi RP2040</state>
+                </option>
+                <option>
+                    <name>FPU2</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>NrRegs</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>NEON</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GFPUCoreSlave2</name>
+                    <version>31</version>
+                    <state>35</state>
+                </option>
+                <option>
+                    <name>OGCMSISPackSelectDevice</name>
+                </option>
+                <option>
+                    <name>OgLibHeap</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGLibAdditionalLocale</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGPrintfVariant</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGPrintfMultibyteSupport</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGScanfVariant</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGScanfMultibyteSupport</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GenLocaleTags</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>GenLocaleDisplayOnly</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>DSPExtension</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZoneModes</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGAarch64Abi</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OG_32_64Device</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>BuildFilesPath</name>
+                    <state>MinSizeRel\</state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>ICCARM</name>
+            <archiveVersion>2</archiveVersion>
+            <data>
+                <version>37</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>CCDefines</name>
+                    <state>LIB_BOOT_STAGE2=1</state>
+                    <state>LIB_PICO_BIT_OPS=1</state>
+                    <state>LIB_PICO_BIT_OPS_PICO=1</state>
+                    <state>LIB_PICO_DIVIDER=1</state>
+                    <state>LIB_PICO_DIVIDER_HARDWARE=1</state>
+                    <state>LIB_PICO_DOUBLE=1</state>
+                    <state>LIB_PICO_DOUBLE_PICO=1</state>
+                    <state>LIB_PICO_FLOAT=1</state>
+                    <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_INT64_OPS=1</state>
+                    <state>LIB_PICO_INT64_OPS_PICO=1</state>
+                    <state>LIB_PICO_MALLOC=1</state>
+                    <state>LIB_PICO_MEM_OPS=1</state>
+                    <state>LIB_PICO_MEM_OPS_PICO=1</state>
+                    <state>LIB_PICO_PLATFORM=1</state>
+                    <state>LIB_PICO_PRINTF=1</state>
+                    <state>LIB_PICO_PRINTF_PICO=1</state>
+                    <state>LIB_PICO_RUNTIME=1</state>
+                    <state>LIB_PICO_STANDARD_LINK=1</state>
+                    <state>LIB_PICO_STDIO=1</state>
+                    <state>LIB_PICO_STDIO_UART=1</state>
+                    <state>LIB_PICO_STDLIB=1</state>
+                    <state>LIB_PICO_SYNC=1</state>
+                    <state>LIB_PICO_SYNC_CORE=1</state>
+                    <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
+                    <state>LIB_PICO_SYNC_MUTEX=1</state>
+                    <state>LIB_PICO_SYNC_SEM=1</state>
+                    <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UTIL=1</state>
+                    <state>NDEBUG</state>
+                    <state>PICO_BOARD="pico"</state>
+                    <state>PICO_BUILD=1</state>
+                    <state>PICO_CMAKE_BUILD_TYPE="Release"</state>
+                    <state>PICO_COPY_TO_RAM=0</state>
+                    <state>PICO_CXX_ENABLE_EXCEPTIONS=0</state>
+                    <state>PICO_NO_FLASH=0</state>
+                    <state>PICO_NO_HARDWARE=0</state>
+                    <state>PICO_ON_DEVICE=1</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
+                    <state>PICO_TARGET_NAME="blink"</state>
+                    <state>PICO_USE_BLOCKED_RAM=0</state>
+                </option>
+                <option>
+                    <name>CCPreprocFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPreprocComments</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPreprocLine</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCListCFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListCMnemonics</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListCMessages</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListAssFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListAssSource</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCEnableRemarks</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCDiagSuppress</name>
+                    <state>Pa039,Pe170</state>
+                </option>
+                <option>
+                    <name>CCDiagRemark</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCDiagWarning</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCDiagError</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCObjPrefix</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCAllowList</name>
+                    <version>1</version>
+                    <state>00000000</state>
+                </option>
+                <option>
+                    <name>CCDebugInfo</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IEndianMode</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IExtraOptionsCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IExtraOptions</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCLangConformance</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCSignedPlainChar</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCRequirePrototypes</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCDiagWarnAreErr</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCCompilerRuntimeInfo</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IFpuProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>OutputFile</name>
+                    <state>$FILE_BNAME$.o</state>
+                </option>
+                <option>
+                    <name>CCLibConfigHeader</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>PreInclude</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_base\include</state>
+                    <state>$PROJ_DIR$\..\generated\pico_base</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\boards\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                </option>
+                <option>
+                    <name>CCStdIncCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCCodeSection</name>
+                    <state>.text</state>
+                </option>
+                <option>
+                    <name>IProcessorMode2</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCOptLevel</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCOptStrategy</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCOptLevelSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCPosIndRopi</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPosIndRwpi</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPosIndNoDynInit</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccLang</name>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>IccCDialect</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IccAllowVLA</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccStaticDestr</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IccCppInlineSemantics</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccCmsis</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IccFloatSemantics</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCOptimizationNoSizeConstraints</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCNoLiteralPool</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCOptStrategySlave</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCGuardCalls</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCEncSource</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCEncOutput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCEncOutputBom</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCEncInput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccExceptions2</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccRTTI2</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OICompilerExtraOption</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCStackProtection</name>
+                    <state>0</state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>AARM</name>
+            <archiveVersion>2</archiveVersion>
+            <data>
+                <version>11</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>AObjPrefix</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AEndian</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>ACaseSensitivity</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>MacroChars</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AWarnEnable</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AWarnWhat</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AWarnOne</name>
+                    <state>12</state>
+                </option>
+                <option>
+                    <name>AWarnRange1</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>AWarnRange2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>ADebug</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AltRegisterNames</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>ADefines</name>
+                    <state>LIB_BOOT_STAGE2=1</state>
+                    <state>LIB_PICO_BIT_OPS=1</state>
+                    <state>LIB_PICO_BIT_OPS_PICO=1</state>
+                    <state>LIB_PICO_DIVIDER=1</state>
+                    <state>LIB_PICO_DIVIDER_HARDWARE=1</state>
+                    <state>LIB_PICO_DOUBLE=1</state>
+                    <state>LIB_PICO_DOUBLE_PICO=1</state>
+                    <state>LIB_PICO_FLOAT=1</state>
+                    <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_INT64_OPS=1</state>
+                    <state>LIB_PICO_INT64_OPS_PICO=1</state>
+                    <state>LIB_PICO_MALLOC=1</state>
+                    <state>LIB_PICO_MEM_OPS=1</state>
+                    <state>LIB_PICO_MEM_OPS_PICO=1</state>
+                    <state>LIB_PICO_PLATFORM=1</state>
+                    <state>LIB_PICO_PRINTF=1</state>
+                    <state>LIB_PICO_PRINTF_PICO=1</state>
+                    <state>LIB_PICO_RUNTIME=1</state>
+                    <state>LIB_PICO_STANDARD_LINK=1</state>
+                    <state>LIB_PICO_STDIO=1</state>
+                    <state>LIB_PICO_STDIO_UART=1</state>
+                    <state>LIB_PICO_STDLIB=1</state>
+                    <state>LIB_PICO_SYNC=1</state>
+                    <state>LIB_PICO_SYNC_CORE=1</state>
+                    <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
+                    <state>LIB_PICO_SYNC_MUTEX=1</state>
+                    <state>LIB_PICO_SYNC_SEM=1</state>
+                    <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UTIL=1</state>
+                    <state>NDEBUG</state>
+                    <state>PICO_BOARD="pico"</state>
+                    <state>PICO_BUILD=1</state>
+                    <state>PICO_CMAKE_BUILD_TYPE="Release"</state>
+                    <state>PICO_COPY_TO_RAM=0</state>
+                    <state>PICO_CXX_ENABLE_EXCEPTIONS=0</state>
+                    <state>PICO_NO_FLASH=0</state>
+                    <state>PICO_NO_HARDWARE=0</state>
+                    <state>PICO_ON_DEVICE=1</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
+                    <state>PICO_TARGET_NAME="blink"</state>
+                    <state>PICO_USE_BLOCKED_RAM=0</state>
+                </option>
+                <option>
+                    <name>AList</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AListHeader</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AListing</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>Includes</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>MacDefs</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>MacExps</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>MacExec</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OnlyAssed</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>MultiLine</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>PageLengthCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>PageLength</name>
+                    <state>80</state>
+                </option>
+                <option>
+                    <name>TabSpacing</name>
+                    <state>8</state>
+                </option>
+                <option>
+                    <name>AXRef</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AXRefDefines</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AXRefInternal</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AXRefDual</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AFpuProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AOutputFile</name>
+                    <state>$FILE_BNAME$.o</state>
+                </option>
+                <option>
+                    <name>ALimitErrorsCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>ALimitErrorsEdit</name>
+                    <state>100</state>
+                </option>
+                <option>
+                    <name>AIgnoreStdInclude</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AUserIncludes</name>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_base\include</state>
+                    <state>$PROJ_DIR$\..\generated\pico_base</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\boards\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                </option>
+                <option>
+                    <name>AExtraOptionsCheckV2</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AExtraOptionsV2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>AsmNoLiteralPool</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>PreInclude</name>
+                    <state></state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>OBJCOPY</name>
+            <archiveVersion>0</archiveVersion>
+            <data>
+                <version>1</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>OOCOutputFormat</name>
+                    <version>3</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OCOutputOverride</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OOCOutputFile</name>
+                    <state>blink.srec</state>
+                </option>
+                <option>
+                    <name>OOCCommandLineProducer</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>OOCObjCopyEnable</name>
+                    <state>0</state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>CUSTOM</name>
+            <archiveVersion>3</archiveVersion>
+            <data>
+                <extensions>.pio</extensions>
+                <cmdline>$PROJ_DIR$\..\..\pico-sdk\tools\pioasm\pioasm -o c-sdk $FILE_PATH$ $PROJ_DIR$\$FILE_BNAME$.pio.h</cmdline>
+                <hasPrio>1</hasPrio>
+                <buildSequence>preCompile</buildSequence>
+                <outputs>
+                    <file>
+                        <name>$PROJ_DIR$\$FILE_BNAME$.pio.h</name>
+                    </file>
+                </outputs>
+            </data>
+        </settings>
+        <settings>
+            <name>BUILDACTION</name>
+            <archiveVersion>1</archiveVersion>
+            <data>
+                <prebuild></prebuild>
+                <postbuild></postbuild>
+            </data>
+        </settings>
+        <settings>
+            <name>ILINK</name>
+            <archiveVersion>0</archiveVersion>
+            <data>
+                <version>26</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>IlinkLibIOConfig</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkInputFileSlave</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOutputFile</name>
+                    <state>blink.out</state>
+                </option>
+                <option>
+                    <name>IlinkDebugInfoEnable</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkKeepSymbols</name>
+                    <state>__checksum</state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryFile</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySymbol</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySegment</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryAlign</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkDefines</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkConfigDefines</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkMapFile</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkLogFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogInitialization</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogModule</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogSection</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogVeneer</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkIcfOverride</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkIcfFile</name>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_standard_link\memmap_default.icf</state>
+                </option>
+                <option>
+                    <name>IlinkIcfFileSlave</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkEnableRemarks</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkSuppressDiags</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkTreatAsRem</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkTreatAsWarn</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkTreatAsErr</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkWarningsAreErrors</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkUseExtraOptions</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkExtraOptions</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkLowLevelInterfaceSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkAutoLibEnable</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkAdditionalLibs</name>
+                </option>
+                <option>
+                    <name>IlinkOverrideProgramEntryLabel</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkProgramEntryLabelSelect</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkProgramEntryLabel</name>
+                    <state>_entry_point</state>
+                </option>
+                <option>
+                    <name>DoFill</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>FillerByte</name>
+                    <state>0xFF</state>
+                </option>
+                <option>
+                    <name>FillerStart</name>
+                    <state>0x10000000</state>
+                </option>
+                <option>
+                    <name>FillerEnd</name>
+                    <state>0x100000fb</state>
+                </option>
+                <option>
+                    <name>CrcSize</name>
+                    <version>0</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>CrcAlign</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CrcPoly</name>
+                    <state>0x11021</state>
+                </option>
+                <option>
+                    <name>CrcCompl</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CrcBitOrder</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CrcInitialValue</name>
+                    <state>0xffffffff</state>
+                </option>
+                <option>
+                    <name>DoCrc</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkBE8Slave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkBufferedTerminalOutput</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkStdoutInterfaceSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CrcFullSize</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkIElfToolPostProcess</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogAutoLibSelect</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogRedirSymbols</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogUnusedFragments</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkCrcReverseByteOrder</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkCrcUseAsInput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOptInline</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOptExceptionsAllow</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkOptExceptionsForce</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkCmsis</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkOptMergeDuplSections</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOptUseVfe</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkOptForceVfe</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkStackAnalysisEnable</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkStackControlFile</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkStackCallGraphFile</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CrcAlgorithm</name>
+                    <version>1</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>CrcUnitSize</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkThreadsSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkLogCallGraph</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkIcfFile_AltDefault</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkEncInput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkEncOutput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkEncOutputBom</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkHeapSelect</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkLocaleSelect</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkTrustzoneImportLibraryOut</name>
+                    <state>blink_import_lib.o</state>
+                </option>
+                <option>
+                    <name>OILinkExtraOption</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryFile2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySymbol2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySegment2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryAlign2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkLogCrtRoutineSelection</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogFragmentInfo</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogInlining</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogMerging</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkDemangle</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkWrapperFileEnable</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkWrapperFile</name>
+                    <state></state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>IARCHIVE</name>
+            <archiveVersion>0</archiveVersion>
+            <data>
+                <version>0</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>IarchiveInputs</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IarchiveOverride</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IarchiveOutput</name>
+                    <state>###Unitialized###</state>
+                </option>
+            </data>
+        </settings>
+    </configuration>
+    <configuration>
+        <name>RelWithDebInfo</name>
+        <toolchain>
+            <name>ARM</name>
+        </toolchain>
+        <debug>0</debug>
+        <settings>
+            <name>General</name>
+            <archiveVersion>3</archiveVersion>
+            <data>
+                <version>34</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>ExePath</name>
+                    <state>RelWithDebInfo\Exe</state>
+                </option>
+                <option>
+                    <name>ObjPath</name>
+                    <state>RelWithDebInfo\Obj</state>
+                </option>
+                <option>
+                    <name>ListPath</name>
+                    <state>RelWithDebInfo\List</state>
+                </option>
+                <option>
+                    <name>BrowseInfoPath</name>
+                    <state>RelWithDebInfo\BrowseInfo</state>
+                </option>
+                <option>
+                    <name>GEndianMode</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>Input description</name>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
+                </option>
+                <option>
+                    <name>Output description</name>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
+                </option>
+                <option>
+                    <name>GOutputBinary</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGCoreOrChip</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>GRuntimeLibSelect</name>
+                    <version>0</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>GRuntimeLibSelectSlave</name>
+                    <version>0</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>RTDescription</name>
+                    <state>Use the full configuration of the C/C++ runtime library. Full locale interface, C locale, file descriptor support, multibytes in printf and scanf, and hex floats in strtod.</state>
+                </option>
+                <option>
+                    <name>OGProductVersion</name>
+                    <state>9.20.4.46976</state>
+                </option>
+                <option>
+                    <name>OGLastSavedByProductVersion</name>
+                    <state>9.20.4.46976</state>
+                </option>
+                <option>
+                    <name>OGChipSelectEditMenu</name>
+                    <state>RP2040	RaspberryPi RP2040</state>
+                </option>
+                <option>
+                    <name>GenLowLevelInterface</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>GEndianModeBE</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>OGBufferedTerminalOutput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GenStdoutInterface</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>RTConfigPath2</name>
+                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</state>
+                </option>
+                <option>
+                    <name>GBECoreSlave</name>
+                    <version>31</version>
+                    <state>35</state>
+                </option>
+                <option>
+                    <name>OGUseCmsis</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGUseCmsisDspLib</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GRuntimeLibThreads</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CoreVariant</name>
+                    <version>31</version>
+                    <state>35</state>
+                </option>
+                <option>
+                    <name>GFPUDeviceSlave</name>
+                    <state>RP2040	RaspberryPi RP2040</state>
+                </option>
+                <option>
+                    <name>FPU2</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>NrRegs</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>NEON</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GFPUCoreSlave2</name>
+                    <version>31</version>
+                    <state>35</state>
+                </option>
+                <option>
+                    <name>OGCMSISPackSelectDevice</name>
+                </option>
+                <option>
+                    <name>OgLibHeap</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGLibAdditionalLocale</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGPrintfVariant</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGPrintfMultibyteSupport</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGScanfVariant</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGScanfMultibyteSupport</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GenLocaleTags</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>GenLocaleDisplayOnly</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>DSPExtension</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZoneModes</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OGAarch64Abi</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OG_32_64Device</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>BuildFilesPath</name>
+                    <state>RelWithDebInfo\</state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>ICCARM</name>
+            <archiveVersion>2</archiveVersion>
+            <data>
+                <version>37</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>CCDefines</name>
+                    <state>LIB_BOOT_STAGE2=1</state>
+                    <state>LIB_PICO_BIT_OPS=1</state>
+                    <state>LIB_PICO_BIT_OPS_PICO=1</state>
+                    <state>LIB_PICO_DIVIDER=1</state>
+                    <state>LIB_PICO_DIVIDER_HARDWARE=1</state>
+                    <state>LIB_PICO_DOUBLE=1</state>
+                    <state>LIB_PICO_DOUBLE_PICO=1</state>
+                    <state>LIB_PICO_FLOAT=1</state>
+                    <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_INT64_OPS=1</state>
+                    <state>LIB_PICO_INT64_OPS_PICO=1</state>
+                    <state>LIB_PICO_MALLOC=1</state>
+                    <state>LIB_PICO_MEM_OPS=1</state>
+                    <state>LIB_PICO_MEM_OPS_PICO=1</state>
+                    <state>LIB_PICO_PLATFORM=1</state>
+                    <state>LIB_PICO_PRINTF=1</state>
+                    <state>LIB_PICO_PRINTF_PICO=1</state>
+                    <state>LIB_PICO_RUNTIME=1</state>
+                    <state>LIB_PICO_STANDARD_LINK=1</state>
+                    <state>LIB_PICO_STDIO=1</state>
+                    <state>LIB_PICO_STDIO_UART=1</state>
+                    <state>LIB_PICO_STDLIB=1</state>
+                    <state>LIB_PICO_SYNC=1</state>
+                    <state>LIB_PICO_SYNC_CORE=1</state>
+                    <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
+                    <state>LIB_PICO_SYNC_MUTEX=1</state>
+                    <state>LIB_PICO_SYNC_SEM=1</state>
+                    <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UTIL=1</state>
+                    <state>NDEBUG</state>
+                    <state>PICO_BOARD="pico"</state>
+                    <state>PICO_BUILD=1</state>
+                    <state>PICO_CMAKE_BUILD_TYPE="Release"</state>
+                    <state>PICO_COPY_TO_RAM=0</state>
+                    <state>PICO_CXX_ENABLE_EXCEPTIONS=0</state>
+                    <state>PICO_NO_FLASH=0</state>
+                    <state>PICO_NO_HARDWARE=0</state>
+                    <state>PICO_ON_DEVICE=1</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
+                    <state>PICO_TARGET_NAME="blink"</state>
+                    <state>PICO_USE_BLOCKED_RAM=0</state>
+                </option>
+                <option>
+                    <name>CCPreprocFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPreprocComments</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPreprocLine</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCListCFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListCMnemonics</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListCMessages</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListAssFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCListAssSource</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCEnableRemarks</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCDiagSuppress</name>
+                    <state>Pa039,Pe170</state>
+                </option>
+                <option>
+                    <name>CCDiagRemark</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCDiagWarning</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCDiagError</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCObjPrefix</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCAllowList</name>
+                    <version>1</version>
+                    <state>00000000</state>
+                </option>
+                <option>
+                    <name>CCDebugInfo</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IEndianMode</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IExtraOptionsCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IExtraOptions</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCLangConformance</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCSignedPlainChar</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCRequirePrototypes</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCDiagWarnAreErr</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCCompilerRuntimeInfo</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IFpuProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>OutputFile</name>
+                    <state>$FILE_BNAME$.o</state>
+                </option>
+                <option>
+                    <name>CCLibConfigHeader</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>PreInclude</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_base\include</state>
+                    <state>$PROJ_DIR$\..\generated\pico_base</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\boards\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                </option>
+                <option>
+                    <name>CCStdIncCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCCodeSection</name>
+                    <state>.text</state>
+                </option>
+                <option>
+                    <name>IProcessorMode2</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCOptLevel</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCOptStrategy</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCOptLevelSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCPosIndRopi</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPosIndRwpi</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCPosIndNoDynInit</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccLang</name>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>IccCDialect</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IccAllowVLA</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccStaticDestr</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IccCppInlineSemantics</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccCmsis</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IccFloatSemantics</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCOptimizationNoSizeConstraints</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCNoLiteralPool</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCOptStrategySlave</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCGuardCalls</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCEncSource</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCEncOutput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CCEncOutputBom</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCEncInput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccExceptions2</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IccRTTI2</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OICompilerExtraOption</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CCStackProtection</name>
+                    <state>0</state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>AARM</name>
+            <archiveVersion>2</archiveVersion>
+            <data>
+                <version>11</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>AObjPrefix</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AEndian</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>ACaseSensitivity</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>MacroChars</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AWarnEnable</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AWarnWhat</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AWarnOne</name>
+                    <state>12</state>
+                </option>
+                <option>
+                    <name>AWarnRange1</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>AWarnRange2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>ADebug</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AltRegisterNames</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>ADefines</name>
+                    <state>LIB_BOOT_STAGE2=1</state>
+                    <state>LIB_PICO_BIT_OPS=1</state>
+                    <state>LIB_PICO_BIT_OPS_PICO=1</state>
+                    <state>LIB_PICO_DIVIDER=1</state>
+                    <state>LIB_PICO_DIVIDER_HARDWARE=1</state>
+                    <state>LIB_PICO_DOUBLE=1</state>
+                    <state>LIB_PICO_DOUBLE_PICO=1</state>
+                    <state>LIB_PICO_FLOAT=1</state>
+                    <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_INT64_OPS=1</state>
+                    <state>LIB_PICO_INT64_OPS_PICO=1</state>
+                    <state>LIB_PICO_MALLOC=1</state>
+                    <state>LIB_PICO_MEM_OPS=1</state>
+                    <state>LIB_PICO_MEM_OPS_PICO=1</state>
+                    <state>LIB_PICO_PLATFORM=1</state>
+                    <state>LIB_PICO_PRINTF=1</state>
+                    <state>LIB_PICO_PRINTF_PICO=1</state>
+                    <state>LIB_PICO_RUNTIME=1</state>
+                    <state>LIB_PICO_STANDARD_LINK=1</state>
+                    <state>LIB_PICO_STDIO=1</state>
+                    <state>LIB_PICO_STDIO_UART=1</state>
+                    <state>LIB_PICO_STDLIB=1</state>
+                    <state>LIB_PICO_SYNC=1</state>
+                    <state>LIB_PICO_SYNC_CORE=1</state>
+                    <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
+                    <state>LIB_PICO_SYNC_MUTEX=1</state>
+                    <state>LIB_PICO_SYNC_SEM=1</state>
+                    <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UTIL=1</state>
+                    <state>NDEBUG</state>
+                    <state>PICO_BOARD="pico"</state>
+                    <state>PICO_BUILD=1</state>
+                    <state>PICO_CMAKE_BUILD_TYPE="Release"</state>
+                    <state>PICO_COPY_TO_RAM=0</state>
+                    <state>PICO_CXX_ENABLE_EXCEPTIONS=0</state>
+                    <state>PICO_NO_FLASH=0</state>
+                    <state>PICO_NO_HARDWARE=0</state>
+                    <state>PICO_ON_DEVICE=1</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/blink"</state>
+                    <state>PICO_TARGET_NAME="blink"</state>
+                    <state>PICO_USE_BLOCKED_RAM=0</state>
+                </option>
+                <option>
+                    <name>AList</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AListHeader</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AListing</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>Includes</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>MacDefs</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>MacExps</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>MacExec</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OnlyAssed</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>MultiLine</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>PageLengthCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>PageLength</name>
+                    <state>80</state>
+                </option>
+                <option>
+                    <name>TabSpacing</name>
+                    <state>8</state>
+                </option>
+                <option>
+                    <name>AXRef</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AXRefDefines</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AXRefInternal</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AXRefDual</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AFpuProcessor</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>AOutputFile</name>
+                    <state>$FILE_BNAME$.o</state>
+                </option>
+                <option>
+                    <name>ALimitErrorsCheck</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>ALimitErrorsEdit</name>
+                    <state>100</state>
+                </option>
+                <option>
+                    <name>AIgnoreStdInclude</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AUserIncludes</name>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_base\include</state>
+                    <state>$PROJ_DIR$\..\generated\pico_base</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\boards\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_sync\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_time\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_util\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_binary_info\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                </option>
+                <option>
+                    <name>AExtraOptionsCheckV2</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>AExtraOptionsV2</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>AsmNoLiteralPool</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>PreInclude</name>
+                    <state></state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>OBJCOPY</name>
+            <archiveVersion>0</archiveVersion>
+            <data>
+                <version>1</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>OOCOutputFormat</name>
+                    <version>3</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OCOutputOverride</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>OOCOutputFile</name>
+                    <state>blink.srec</state>
+                </option>
+                <option>
+                    <name>OOCCommandLineProducer</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>OOCObjCopyEnable</name>
+                    <state>0</state>
+                </option>
+            </data>
+        </settings>
+        <settings>
+            <name>CUSTOM</name>
+            <archiveVersion>3</archiveVersion>
+            <data>
+                <extensions>.pio</extensions>
+                <cmdline>$PROJ_DIR$\..\..\pico-sdk\tools\pioasm\pioasm -o c-sdk $FILE_PATH$ $PROJ_DIR$\$FILE_BNAME$.pio.h</cmdline>
+                <hasPrio>1</hasPrio>
+                <buildSequence>preCompile</buildSequence>
+                <outputs>
+                    <file>
+                        <name>$PROJ_DIR$\$FILE_BNAME$.pio.h</name>
+                    </file>
+                </outputs>
+            </data>
+        </settings>
+        <settings>
+            <name>BUILDACTION</name>
+            <archiveVersion>1</archiveVersion>
+            <data>
+                <prebuild></prebuild>
+                <postbuild></postbuild>
+            </data>
+        </settings>
+        <settings>
+            <name>ILINK</name>
+            <archiveVersion>0</archiveVersion>
+            <data>
+                <version>26</version>
+                <wantNonLocal>1</wantNonLocal>
+                <debug>0</debug>
+                <option>
+                    <name>IlinkLibIOConfig</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkInputFileSlave</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOutputFile</name>
+                    <state>blink.out</state>
+                </option>
+                <option>
+                    <name>IlinkDebugInfoEnable</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkKeepSymbols</name>
+                    <state>__checksum</state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryFile</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySymbol</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinarySegment</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkRawBinaryAlign</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkDefines</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkConfigDefines</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkMapFile</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkLogFile</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogInitialization</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogModule</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogSection</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogVeneer</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkIcfOverride</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkIcfFile</name>
+                    <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_standard_link\memmap_default.icf</state>
+                </option>
+                <option>
+                    <name>IlinkIcfFileSlave</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkEnableRemarks</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkSuppressDiags</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkTreatAsRem</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkTreatAsWarn</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkTreatAsErr</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkWarningsAreErrors</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkUseExtraOptions</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkExtraOptions</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkLowLevelInterfaceSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkAutoLibEnable</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkAdditionalLibs</name>
+                </option>
+                <option>
+                    <name>IlinkOverrideProgramEntryLabel</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkProgramEntryLabelSelect</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkProgramEntryLabel</name>
+                    <state>_entry_point</state>
+                </option>
+                <option>
+                    <name>DoFill</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>FillerByte</name>
+                    <state>0xFF</state>
+                </option>
+                <option>
+                    <name>FillerStart</name>
+                    <state>0x10000000</state>
+                </option>
+                <option>
+                    <name>FillerEnd</name>
+                    <state>0x100000fb</state>
+                </option>
+                <option>
+                    <name>CrcSize</name>
+                    <version>0</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>CrcAlign</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CrcPoly</name>
+                    <state>0x11021</state>
+                </option>
+                <option>
+                    <name>CrcCompl</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CrcBitOrder</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>CrcInitialValue</name>
+                    <state>0xffffffff</state>
+                </option>
+                <option>
+                    <name>DoCrc</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkBE8Slave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkBufferedTerminalOutput</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkStdoutInterfaceSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>CrcFullSize</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkIElfToolPostProcess</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogAutoLibSelect</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogRedirSymbols</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkLogUnusedFragments</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkCrcReverseByteOrder</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkCrcUseAsInput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOptInline</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOptExceptionsAllow</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkOptExceptionsForce</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkCmsis</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkOptMergeDuplSections</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkOptUseVfe</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkOptForceVfe</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkStackAnalysisEnable</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkStackControlFile</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkStackCallGraphFile</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>CrcAlgorithm</name>
+                    <version>1</version>
+                    <state>2</state>
+                </option>
+                <option>
+                    <name>CrcUnitSize</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkThreadsSlave</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkLogCallGraph</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkIcfFile_AltDefault</name>
+                    <state></state>
+                </option>
+                <option>
+                    <name>IlinkEncInput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkEncOutput</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>IlinkEncOutputBom</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkHeapSelect</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkLocaleSelect</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkTrustzoneImportLibraryOut</name>
+                    <state>blink_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -2262,6 +4848,15 @@
         </settings>
     </configuration>
     <group>
+        <name>pico-examples</name>
+        <group>
+            <name>blink</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\pico-examples\blink\blink.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
         <name>pico-sdk</name>
         <group>
             <name>src</name>
@@ -2310,186 +4905,6 @@
                     <name>boot_stage2</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\compile_time_choice.S</name>
-                        <configuration>
-                            <name>Debug</name>
-                            <settings>
-                                <name>AARM</name>
-                                <data>
-                                    <version>11</version>
-                                    <wantNonLocal>0</wantNonLocal>
-                                    <debug>1</debug>
-                                    <option>
-                                        <name>AObjPrefix</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>AEndian</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>ACaseSensitivity</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>MacroChars</name>
-                                        <version>0</version>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AWarnEnable</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>AWarnWhat</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>AWarnOne</name>
-                                        <state>12</state>
-                                    </option>
-                                    <option>
-                                        <name>AWarnRange1</name>
-                                        <state></state>
-                                    </option>
-                                    <option>
-                                        <name>AWarnRange2</name>
-                                        <state></state>
-                                    </option>
-                                    <option>
-                                        <name>ADebug</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>AltRegisterNames</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>ADefines</name>
-                                        <state>PICO_BOARD="pico"</state>
-                                        <state>PICO_BUILD=1</state>
-                                        <state>PICO_NO_HARDWARE=0</state>
-                                        <state>PICO_ON_DEVICE=1</state>
-                                        <state>NDEBUG</state>
-                                    </option>
-                                    <option>
-                                        <name>AList</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AListHeader</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>AListing</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>Includes</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>MacDefs</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>MacExps</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>MacExec</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>OnlyAssed</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>MultiLine</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>PageLengthCheck</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>PageLength</name>
-                                        <state>80</state>
-                                    </option>
-                                    <option>
-                                        <name>TabSpacing</name>
-                                        <state>8</state>
-                                    </option>
-                                    <option>
-                                        <name>AXRef</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AXRefDefines</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AXRefInternal</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AXRefDual</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AProcessor</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>AFpuProcessor</name>
-                                        <state>1</state>
-                                    </option>
-                                    <option>
-                                        <name>AOutputFile</name>
-                                        <state>$FILE_BNAME$.o</state>
-                                    </option>
-                                    <option>
-                                        <name>ALimitErrorsCheck</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>ALimitErrorsEdit</name>
-                                        <state>100</state>
-                                    </option>
-                                    <option>
-                                        <name>AIgnoreStdInclude</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AUserIncludes</name>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2040\hardware_regs\include</state>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\hardware_base\include</state>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\common\pico_base\include</state>
-                                        <state>$PROJ_DIR$\..\generated\pico_base</state>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\boards\include</state>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\pico_platform\include</state>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                                        <state>$PROJ_DIR$\..\..\pico-sdk\src\rp2_common\cmsis\include</state>
-                                    </option>
-                                    <option>
-                                        <name>AExtraOptionsCheckV2</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>AExtraOptionsV2</name>
-                                        <state></state>
-                                    </option>
-                                    <option>
-                                        <name>AsmNoLiteralPool</name>
-                                        <state>0</state>
-                                    </option>
-                                    <option>
-                                        <name>PreInclude</name>
-                                        <state></state>
-                                    </option>
-                                </data>
-                            </settings>
-                        </configuration>
                     </file>
                 </group>
                 <group>
@@ -2684,7 +5099,4 @@
             </group>
         </group>
     </group>
-    <file>
-        <name>$PROJ_DIR$\..\..\pico-examples\blink\blink.c</name>
-    </file>
 </project>

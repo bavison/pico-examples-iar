@@ -251,9 +251,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -374,6 +375,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -412,6 +414,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -620,9 +624,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -714,6 +719,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -752,6 +758,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -789,7 +797,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>pio_ws2812_parallel.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -841,7 +849,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>pio_ws2812_parallel.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1137,7 +1145,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>pio_ws2812_parallel_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1462,9 +1470,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1585,6 +1594,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -1623,6 +1633,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1832,9 +1844,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -1926,6 +1939,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -1964,6 +1978,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -2001,7 +2017,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>pio_ws2812_parallel.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -2053,7 +2069,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>pio_ws2812_parallel.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -2349,7 +2365,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>pio_ws2812_parallel_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -2674,9 +2690,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -2797,6 +2814,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -2835,6 +2853,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -3044,9 +3064,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -3138,6 +3159,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -3176,6 +3198,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -3213,7 +3237,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>pio_ws2812_parallel.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -3265,7 +3289,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>pio_ws2812_parallel.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -3561,7 +3585,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>pio_ws2812_parallel_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -3886,9 +3910,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -4009,6 +4034,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -4047,6 +4073,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -4256,9 +4284,10 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/pio/ws2812"</state>
+                    <state>PICO_TARGET_NAME="pio_ws2812_parallel"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
+                    <state>PIN_DBG1=3</state>
                 </option>
                 <option>
                     <name>AList</name>
@@ -4350,6 +4379,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
+                    <state>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\generated</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
@@ -4388,6 +4418,8 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -4425,7 +4457,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>pio_ws2812_parallel.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -4477,7 +4509,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>pio_ws2812_parallel.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -4773,7 +4805,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>pio_ws2812_parallel_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -4850,11 +4882,14 @@
     <group>
         <name>pico-examples</name>
         <group>
-            <name>hello_world</name>
+            <name>pio</name>
             <group>
-                <name>serial</name>
+                <name>ws2812</name>
                 <file>
-                    <name>$PROJ_DIR$\..\..\..\pico-examples\hello_world\serial\hello_serial.c</name>
+                    <name>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\ws2812.pio</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\pico-examples\pio\ws2812\ws2812_parallel.c</name>
                 </file>
             </group>
         </group>
@@ -4929,6 +4964,12 @@
                     </file>
                 </group>
                 <group>
+                    <name>hardware_dma</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_dma\dma.c</name>
+                    </file>
+                </group>
+                <group>
                     <name>hardware_gpio</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\gpio.c</name>
@@ -4941,6 +4982,12 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S</name>
+                    </file>
+                </group>
+                <group>
+                    <name>hardware_pio</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pio\pio.c</name>
                     </file>
                 </group>
                 <group>

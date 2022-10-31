@@ -251,8 +251,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -620,8 +620,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -789,7 +789,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>hello_uart.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -841,7 +841,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>hello_uart.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1137,7 +1137,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>hello_uart_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1462,8 +1462,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -1832,8 +1832,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -2001,7 +2001,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>hello_uart.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -2053,7 +2053,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>hello_uart.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -2349,7 +2349,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>hello_uart_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -2674,8 +2674,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -3044,8 +3044,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -3213,7 +3213,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>hello_uart.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -3265,7 +3265,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>hello_uart.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -3561,7 +3561,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>hello_uart_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -3886,8 +3886,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -4256,8 +4256,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/hello_world/serial"</state>
-                    <state>PICO_TARGET_NAME="hello_serial"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/uart/hello_uart"</state>
+                    <state>PICO_TARGET_NAME="hello_uart"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -4425,7 +4425,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hello_serial.srec</state>
+                    <state>hello_uart.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -4477,7 +4477,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>hello_serial.out</state>
+                    <state>hello_uart.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -4773,7 +4773,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>hello_serial_import_lib.o</state>
+                    <state>hello_uart_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -4850,11 +4850,11 @@
     <group>
         <name>pico-examples</name>
         <group>
-            <name>hello_world</name>
+            <name>uart</name>
             <group>
-                <name>serial</name>
+                <name>hello_uart</name>
                 <file>
-                    <name>$PROJ_DIR$\..\..\..\pico-examples\hello_world\serial\hello_serial.c</name>
+                    <name>$PROJ_DIR$\..\..\..\pico-examples\uart\hello_uart\hello_uart.c</name>
                 </file>
             </group>
         </group>
