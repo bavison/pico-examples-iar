@@ -58,6 +58,9 @@
         <path>$WS_DIR$\dma\hello_dma\hello_dma.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\dma\sniff_crc\sniff_crc.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\flash\cache_perfctr\flash_cache_perfctr.ewp</path>
     </project>
     <project>
@@ -106,13 +109,19 @@
         <path>$WS_DIR$\i2c\mpu6050_i2c\mpu6050_i2c.ewp</path>
     </project>
     <project>
-        <path>$WS_DIR$\i2c\oled_i2c\oled_i2c.ewp</path>
+        <path>$WS_DIR$\i2c\ssd1306_i2c\ssd1306_i2c.ewp</path>
     </project>
     <project>
         <path>$WS_DIR$\i2c\pa1010d_i2c\pa1010d_i2c.ewp</path>
     </project>
     <project>
         <path>$WS_DIR$\i2c\pcf8523_i2c\pcf8523_i2c.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\i2c\ht16k33_i2c\ht16k33_i2c.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\i2c\slave_mem_i2c\slave_mem_i2c.ewp</path>
     </project>
     <project>
         <path>$WS_DIR$\interp\hello_interp\hello_interp.ewp</path>
@@ -331,13 +340,13 @@
         <path>$WS_DIR$\usb\device\dev_lowlevel\dev_lowlevel.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\usb\host\tinyusb_host_examples\bare_api\tinyusb_host_bare_api.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\usb\host\tinyusb_host_examples\cdc_msc_hid\tinyusb_host_cdc_msc_hid.ewp</path>
     </project>
     <project>
         <path>$WS_DIR$\usb\host\tinyusb_host_examples\hid_controller\tinyusb_host_hid_controller.ewp</path>
-    </project>
-    <project>
-        <path>$WS_DIR$\usb\host\host_cdc_msc_hid\host_cdc_msc_hid.ewp</path>
     </project>
     <project>
         <path>$WS_DIR$\watchdog\hello_watchdog\hello_watchdog.ewp</path>
@@ -430,6 +439,10 @@
                 <configuration>Debug</configuration>
             </member>
             <member>
+                <project>sniff_crc</project>
+                <configuration>Debug</configuration>
+            </member>
+            <member>
                 <project>flash_cache_perfctr</project>
                 <configuration>Debug</configuration>
             </member>
@@ -494,7 +507,7 @@
                 <configuration>Debug</configuration>
             </member>
             <member>
-                <project>oled_i2c</project>
+                <project>ssd1306_i2c</project>
                 <configuration>Debug</configuration>
             </member>
             <member>
@@ -503,6 +516,14 @@
             </member>
             <member>
                 <project>pcf8523_i2c</project>
+                <configuration>Debug</configuration>
+            </member>
+            <member>
+                <project>ht16k33_i2c</project>
+                <configuration>Debug</configuration>
+            </member>
+            <member>
+                <project>slave_mem_i2c</project>
                 <configuration>Debug</configuration>
             </member>
             <member>
@@ -786,15 +807,15 @@
                 <configuration>Debug</configuration>
             </member>
             <member>
+                <project>tinyusb_host_bare_api</project>
+                <configuration>Debug</configuration>
+            </member>
+            <member>
                 <project>tinyusb_host_cdc_msc_hid</project>
                 <configuration>Debug</configuration>
             </member>
             <member>
                 <project>tinyusb_host_hid_controller</project>
-                <configuration>Debug</configuration>
-            </member>
-            <member>
-                <project>host_cdc_msc_hid</project>
                 <configuration>Debug</configuration>
             </member>
             <member>
@@ -889,6 +910,10 @@
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
+                <project>sniff_crc</project>
+                <configuration>MinSizeRel</configuration>
+            </member>
+            <member>
                 <project>flash_cache_perfctr</project>
                 <configuration>MinSizeRel</configuration>
             </member>
@@ -953,7 +978,7 @@
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
-                <project>oled_i2c</project>
+                <project>ssd1306_i2c</project>
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
@@ -962,6 +987,14 @@
             </member>
             <member>
                 <project>pcf8523_i2c</project>
+                <configuration>MinSizeRel</configuration>
+            </member>
+            <member>
+                <project>ht16k33_i2c</project>
+                <configuration>MinSizeRel</configuration>
+            </member>
+            <member>
+                <project>slave_mem_i2c</project>
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
@@ -1245,15 +1278,15 @@
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
+                <project>tinyusb_host_bare_api</project>
+                <configuration>MinSizeRel</configuration>
+            </member>
+            <member>
                 <project>tinyusb_host_cdc_msc_hid</project>
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
                 <project>tinyusb_host_hid_controller</project>
-                <configuration>MinSizeRel</configuration>
-            </member>
-            <member>
-                <project>host_cdc_msc_hid</project>
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
@@ -1348,6 +1381,10 @@
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
+                <project>sniff_crc</project>
+                <configuration>RelWithDebInfo</configuration>
+            </member>
+            <member>
                 <project>flash_cache_perfctr</project>
                 <configuration>RelWithDebInfo</configuration>
             </member>
@@ -1412,7 +1449,7 @@
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
-                <project>oled_i2c</project>
+                <project>ssd1306_i2c</project>
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
@@ -1421,6 +1458,14 @@
             </member>
             <member>
                 <project>pcf8523_i2c</project>
+                <configuration>RelWithDebInfo</configuration>
+            </member>
+            <member>
+                <project>ht16k33_i2c</project>
+                <configuration>RelWithDebInfo</configuration>
+            </member>
+            <member>
+                <project>slave_mem_i2c</project>
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
@@ -1704,15 +1749,15 @@
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
+                <project>tinyusb_host_bare_api</project>
+                <configuration>RelWithDebInfo</configuration>
+            </member>
+            <member>
                 <project>tinyusb_host_cdc_msc_hid</project>
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
                 <project>tinyusb_host_hid_controller</project>
-                <configuration>RelWithDebInfo</configuration>
-            </member>
-            <member>
-                <project>host_cdc_msc_hid</project>
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
@@ -1807,6 +1852,10 @@
                 <configuration>Release</configuration>
             </member>
             <member>
+                <project>sniff_crc</project>
+                <configuration>Release</configuration>
+            </member>
+            <member>
                 <project>flash_cache_perfctr</project>
                 <configuration>Release</configuration>
             </member>
@@ -1871,7 +1920,7 @@
                 <configuration>Release</configuration>
             </member>
             <member>
-                <project>oled_i2c</project>
+                <project>ssd1306_i2c</project>
                 <configuration>Release</configuration>
             </member>
             <member>
@@ -1880,6 +1929,14 @@
             </member>
             <member>
                 <project>pcf8523_i2c</project>
+                <configuration>Release</configuration>
+            </member>
+            <member>
+                <project>ht16k33_i2c</project>
+                <configuration>Release</configuration>
+            </member>
+            <member>
+                <project>slave_mem_i2c</project>
                 <configuration>Release</configuration>
             </member>
             <member>
@@ -2163,15 +2220,15 @@
                 <configuration>Release</configuration>
             </member>
             <member>
+                <project>tinyusb_host_bare_api</project>
+                <configuration>Release</configuration>
+            </member>
+            <member>
                 <project>tinyusb_host_cdc_msc_hid</project>
                 <configuration>Release</configuration>
             </member>
             <member>
                 <project>tinyusb_host_hid_controller</project>
-                <configuration>Release</configuration>
-            </member>
-            <member>
-                <project>host_cdc_msc_hid</project>
                 <configuration>Release</configuration>
             </member>
             <member>

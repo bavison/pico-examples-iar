@@ -214,7 +214,6 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -241,11 +240,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -258,6 +257,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -398,27 +398,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -594,7 +597,6 @@
                 </option>
                 <option>
                     <name>ADefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -621,11 +623,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -638,6 +640,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -749,27 +752,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -1446,7 +1452,6 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -1473,11 +1478,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -1491,6 +1496,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -1631,27 +1637,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -1827,7 +1836,6 @@
                 </option>
                 <option>
                     <name>ADefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -1854,11 +1862,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -1872,6 +1880,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -1983,27 +1992,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -2680,7 +2692,6 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -2707,11 +2718,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -2725,6 +2736,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -2865,27 +2877,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -3061,7 +3076,6 @@
                 </option>
                 <option>
                     <name>ADefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -3088,11 +3102,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -3106,6 +3120,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -3217,27 +3232,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -3914,7 +3932,6 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -3941,11 +3958,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -3959,6 +3976,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -4099,27 +4117,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -4295,7 +4316,6 @@
                 </option>
                 <option>
                     <name>ADefines</name>
-                    <state>CFG_TUSB_DEBUG=0</state>
                     <state>CFG_TUSB_MCU=OPT_MCU_RP2040</state>
                     <state>CFG_TUSB_OS=OPT_OS_PICO</state>
                     <state>LIB_BOOT_STAGE2=1</state>
@@ -4322,11 +4342,11 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
                     <state>LIB_PICO_TIME=1</state>
+                    <state>LIB_PICO_UNIQUE_ID=1</state>
                     <state>LIB_PICO_UTIL=1</state>
                     <state>LIB_TINYUSB_BOARD=1</state>
                     <state>LIB_TINYUSB_DEVICE=1</state>
@@ -4340,6 +4360,7 @@
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
                     <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/usb/device/dev_hid_composite"</state>
+                    <state>PICO_RP2040_USB_DEVICE_UFRAME_FIX=1</state>
                     <state>PICO_TARGET_NAME="dev_hid_composite"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
@@ -4451,27 +4472,30 @@
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_util\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\include</state>
+                    <state>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\include</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\src\common</state>
                     <state>$PROJ_DIR$\..\..\..\..\pico-sdk\lib\tinyusb\hw</state>
@@ -5146,6 +5170,12 @@
                     </file>
                 </group>
                 <group>
+                    <name>hardware_flash</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_flash\flash.c</name>
+                    </file>
+                </group>
+                <group>
                     <name>hardware_gpio</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\gpio.c</name>
@@ -5268,7 +5298,7 @@
                 <group>
                     <name>pico_malloc</name>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c</name>
+                        <name>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_malloc\pico_malloc_iar.c</name>
                     </file>
                 </group>
                 <group>
@@ -5323,6 +5353,12 @@
                     <name>pico_stdlib</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c</name>
+                    </file>
+                </group>
+                <group>
+                    <name>pico_unique_id</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\..\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c</name>
                     </file>
                 </group>
             </group>

@@ -223,6 +223,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -237,7 +238,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -251,8 +251,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -374,8 +374,8 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -385,34 +385,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -593,6 +595,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -607,7 +610,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -621,8 +623,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -715,8 +717,8 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -726,34 +728,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -791,7 +795,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>oled_i2c.srec</state>
+                    <state>slave_mem_i2c.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -843,7 +847,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>oled_i2c.out</state>
+                    <state>slave_mem_i2c.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1139,7 +1143,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>oled_i2c_import_lib.o</state>
+                    <state>slave_mem_i2c_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1435,6 +1439,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -1449,7 +1454,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -1464,8 +1468,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -1587,8 +1591,8 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -1598,34 +1602,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1806,6 +1812,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -1820,7 +1827,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -1835,8 +1841,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -1929,8 +1935,8 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -1940,34 +1946,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -2005,7 +2013,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>oled_i2c.srec</state>
+                    <state>slave_mem_i2c.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -2057,7 +2065,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>oled_i2c.out</state>
+                    <state>slave_mem_i2c.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -2353,7 +2361,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>oled_i2c_import_lib.o</state>
+                    <state>slave_mem_i2c_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -2649,6 +2657,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -2663,7 +2672,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -2678,8 +2686,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -2801,8 +2809,8 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -2812,34 +2820,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -3020,6 +3030,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -3034,7 +3045,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -3049,8 +3059,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -3143,8 +3153,8 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -3154,34 +3164,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -3219,7 +3231,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>oled_i2c.srec</state>
+                    <state>slave_mem_i2c.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -3271,7 +3283,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>oled_i2c.out</state>
+                    <state>slave_mem_i2c.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -3567,7 +3579,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>oled_i2c_import_lib.o</state>
+                    <state>slave_mem_i2c_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -3863,6 +3875,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -3877,7 +3890,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -3892,8 +3904,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -4015,8 +4027,8 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -4026,34 +4038,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -4234,6 +4248,7 @@
                     <state>LIB_PICO_DOUBLE_PICO=1</state>
                     <state>LIB_PICO_FLOAT=1</state>
                     <state>LIB_PICO_FLOAT_PICO=1</state>
+                    <state>LIB_PICO_I2C_SLAVE=1</state>
                     <state>LIB_PICO_INT64_OPS=1</state>
                     <state>LIB_PICO_INT64_OPS_PICO=1</state>
                     <state>LIB_PICO_MALLOC=1</state>
@@ -4248,7 +4263,6 @@
                     <state>LIB_PICO_STDIO_UART=1</state>
                     <state>LIB_PICO_STDLIB=1</state>
                     <state>LIB_PICO_SYNC=1</state>
-                    <state>LIB_PICO_SYNC_CORE=1</state>
                     <state>LIB_PICO_SYNC_CRITICAL_SECTION=1</state>
                     <state>LIB_PICO_SYNC_MUTEX=1</state>
                     <state>LIB_PICO_SYNC_SEM=1</state>
@@ -4263,8 +4277,8 @@
                     <state>PICO_NO_FLASH=0</state>
                     <state>PICO_NO_HARDWARE=0</state>
                     <state>PICO_ON_DEVICE=1</state>
-                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/oled_i2c"</state>
-                    <state>PICO_TARGET_NAME="oled_i2c"</state>
+                    <state>PICO_PROGRAM_URL="https://github.com/raspberrypi/pico-examples/tree/HEAD/i2c/slave_mem_i2c"</state>
+                    <state>PICO_TARGET_NAME="slave_mem_i2c"</state>
                     <state>PICO_USE_BLOCKED_RAM=0</state>
                 </option>
                 <option>
@@ -4357,8 +4371,8 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_base\include</state>
                     <state>$PROJ_DIR$\..\..\generated\pico_base</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\boards\include</state>
@@ -4368,34 +4382,36 @@
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2040\hardware_structs\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_claim\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_sync\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_time\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_timer\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_irq\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_sync\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_util\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_resets\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_clocks\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_gpio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_pll\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_vreg\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_watchdog\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_xosc\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_stdlib\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_uart\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_divider\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_runtime\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_printf\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_bit_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_divider\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_double\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_float\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_bootrom\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\common\pico_binary_info\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio\include</state>
                     <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_stdio_uart\include</state>
-                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\hardware_i2c\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\boot_stage2\asminclude</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\include</state>
+                    <state>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_mem_ops\include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -4433,7 +4449,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>oled_i2c.srec</state>
+                    <state>slave_mem_i2c.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -4485,7 +4501,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>oled_i2c.out</state>
+                    <state>slave_mem_i2c.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -4781,7 +4797,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>oled_i2c_import_lib.o</state>
+                    <state>slave_mem_i2c_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -4860,9 +4876,9 @@
         <group>
             <name>i2c</name>
             <group>
-                <name>oled_i2c</name>
+                <name>slave_mem_i2c</name>
                 <file>
-                    <name>$PROJ_DIR$\..\..\..\pico-examples\i2c\oled_i2c\oled_i2c.c</name>
+                    <name>$PROJ_DIR$\..\..\..\pico-examples\i2c\slave_mem_i2c\slave_mem_i2c.c</name>
                 </file>
             </group>
         </group>
@@ -5048,6 +5064,12 @@
                     </file>
                 </group>
                 <group>
+                    <name>pico_i2c_slave</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_i2c_slave\i2c_slave.c</name>
+                    </file>
+                </group>
+                <group>
                     <name>pico_int64_ops</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S</name>
@@ -5056,7 +5078,7 @@
                 <group>
                     <name>pico_malloc</name>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c</name>
+                        <name>$PROJ_DIR$\..\..\..\pico-sdk\src\rp2_common\pico_malloc\pico_malloc_iar.c</name>
                     </file>
                 </group>
                 <group>
