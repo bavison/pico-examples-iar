@@ -289,6 +289,9 @@
         <path>$WS_DIR$\usb\device\tinyusb_device_examples\audio_test\tinyusb_dev_audio_test.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\usb\device\tinyusb_device_examples\audio_test_multi_rate\tinyusb_dev_audio_test_multi_rate.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\usb\device\tinyusb_device_examples\board_test\tinyusb_dev_board_test.ewp</path>
     </project>
     <project>
@@ -338,15 +341,6 @@
     </project>
     <project>
         <path>$WS_DIR$\usb\device\dev_lowlevel\dev_lowlevel.ewp</path>
-    </project>
-    <project>
-        <path>$WS_DIR$\usb\host\tinyusb_host_examples\bare_api\tinyusb_host_bare_api.ewp</path>
-    </project>
-    <project>
-        <path>$WS_DIR$\usb\host\tinyusb_host_examples\cdc_msc_hid\tinyusb_host_cdc_msc_hid.ewp</path>
-    </project>
-    <project>
-        <path>$WS_DIR$\usb\host\tinyusb_host_examples\hid_controller\tinyusb_host_hid_controller.ewp</path>
     </project>
     <project>
         <path>$WS_DIR$\watchdog\hello_watchdog\hello_watchdog.ewp</path>
@@ -739,6 +733,10 @@
                 <configuration>Debug</configuration>
             </member>
             <member>
+                <project>tinyusb_dev_audio_test_multi_rate</project>
+                <configuration>Debug</configuration>
+            </member>
+            <member>
                 <project>tinyusb_dev_board_test</project>
                 <configuration>Debug</configuration>
             </member>
@@ -804,18 +802,6 @@
             </member>
             <member>
                 <project>dev_lowlevel</project>
-                <configuration>Debug</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_bare_api</project>
-                <configuration>Debug</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_cdc_msc_hid</project>
-                <configuration>Debug</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_hid_controller</project>
                 <configuration>Debug</configuration>
             </member>
             <member>
@@ -1210,6 +1196,10 @@
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
+                <project>tinyusb_dev_audio_test_multi_rate</project>
+                <configuration>MinSizeRel</configuration>
+            </member>
+            <member>
                 <project>tinyusb_dev_board_test</project>
                 <configuration>MinSizeRel</configuration>
             </member>
@@ -1275,18 +1265,6 @@
             </member>
             <member>
                 <project>dev_lowlevel</project>
-                <configuration>MinSizeRel</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_bare_api</project>
-                <configuration>MinSizeRel</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_cdc_msc_hid</project>
-                <configuration>MinSizeRel</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_hid_controller</project>
                 <configuration>MinSizeRel</configuration>
             </member>
             <member>
@@ -1681,6 +1659,10 @@
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
+                <project>tinyusb_dev_audio_test_multi_rate</project>
+                <configuration>RelWithDebInfo</configuration>
+            </member>
+            <member>
                 <project>tinyusb_dev_board_test</project>
                 <configuration>RelWithDebInfo</configuration>
             </member>
@@ -1746,18 +1728,6 @@
             </member>
             <member>
                 <project>dev_lowlevel</project>
-                <configuration>RelWithDebInfo</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_bare_api</project>
-                <configuration>RelWithDebInfo</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_cdc_msc_hid</project>
-                <configuration>RelWithDebInfo</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_hid_controller</project>
                 <configuration>RelWithDebInfo</configuration>
             </member>
             <member>
@@ -2152,6 +2122,10 @@
                 <configuration>Release</configuration>
             </member>
             <member>
+                <project>tinyusb_dev_audio_test_multi_rate</project>
+                <configuration>Release</configuration>
+            </member>
+            <member>
                 <project>tinyusb_dev_board_test</project>
                 <configuration>Release</configuration>
             </member>
@@ -2217,18 +2191,6 @@
             </member>
             <member>
                 <project>dev_lowlevel</project>
-                <configuration>Release</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_bare_api</project>
-                <configuration>Release</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_cdc_msc_hid</project>
-                <configuration>Release</configuration>
-            </member>
-            <member>
-                <project>tinyusb_host_hid_controller</project>
                 <configuration>Release</configuration>
             </member>
             <member>
